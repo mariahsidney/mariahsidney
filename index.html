@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mariah Sidney Bellaflor</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/da36071577.js" crossorigin="anonymous"></script>
+</head>
+<body class="bg-gray-100">
+
+    <nav class="bg-gray-800 sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center py-4">
+            <button id="menuButton" class="text-white inline-block lg:hidden focus:outline-none" onclick="toggleMobileMenu()">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+            <ul id="menu" class="hidden lg:flex space-x-4 ml-auto">
+                <li><a href="#landing" class="text-white duration-300 hover:text-gray-200">HOME</a></li>
+                <li><a href="#about" class="text-white duration-300 hover:text-gray-200">ABOUT</a></li>
+                <li><a href="#services" class="text-white duration-300 hover:text-gray-200">SERVICES</a></li>
+                <li><a href="#portfolio" class="text-white duration-300 hover:text-gray-200">PORTFOLIO</a></li>
+                <li><a href="#sideprojects" class="text-white duration-300 hover:text-gray-200">SIDE PROJECTS</a></li>
+            </ul>
+        </div>
+        <div id="mobileMenu" class="lg:hidden hidden bg-gray-700">
+            <ul class="flex flex-col space-y-2 p-4">
+                <li><a href="#landing" class="text-white duration-300 hover:text-gray-200">HOME</a></li>
+                <li><a href="#about" class="text-white duration-300 hover:text-gray-200">ABOUT</a></li>
+                <li><a href="#services" class="text-white duration-300 hover:text-gray-200">SERVICES</a></li>
+                <li><a href="#portfolio" class="text-white duration-300 hover:text-gray-200">PORTFOLIO</a></li>
+                <li><a href="#sideprojects" class="text-white duration-300 hover:text-gray-200">SIDE PROJECTS</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div id="landing" class="h-screen flex flex-col justify-center items-center bg-gray-100">
+        <div class="flex flex-col md:flex-row justify-between items-center w-full max-w-4xl px-4">
+            <div class="text-content text-center md:text-left mb-4 md:mb-0">
+                <h1 class="text-4xl font-bold mb-2">Hi! I'm Mariah Sidney.</h1> 
+                <p class="mb-4">Welcome to my portfolio!</p>
+                <div class="flex items-center space-x-4">
+                    <span class="text-black text-lg uppercase">Let's Connect</span>
+                    <a href="https://github.com/" target="_blank" class="hover:underline">
+                        <i class="fa-brands fa-github" style="font-size: 24px;"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/" target="_blank" class="hover:underline">
+                        <i class="fa-brands fa-linkedin" style="font-size: 24px;"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="flex justify-center md:justify-end">
+                <img src="/images/shortdetails.png" class="h-64 w-auto md:w-90 object-cover">
+            </div>
+        </div>
+    </div>
+
+    <div id="about" class="h-screen flex flex-col justify-center items-center bg-gray-900 text-white">
+        <div class="container mx-auto p-4 md:p-8">
+            <h2 class="text-2xl font-bold mb-4 text-center">ABOUT</h2>
+            <div class="flex flex-col md:flex-row items-center justify-center md:justify-start">
+                <img src="/images/fullshot.jpg" class="h-32 w-32 md:h-64 md:w-64 object-cover rounded-full mb-4 md:mb-0 md:mr-8">
+                <div class="text-center md:text-left">
+                    <p class="text-base md:text-lg mb-2">Hello! I'm Mariah Sidney, a fresh graduate from Polytechnic University of the Philippines with a degree in Bachelor of Science in Information Technology. With a passion for technology and an aptitude for problem-solving, I'm excited to launch my career in the tech industry.</p> 
+                    <p class="text-base md:text-lg mb-2">In the past four years, I have gained hands-on experience in web design and development, and software development. I have completed projects using the skills I learned, such as creating a database, building a simple website, and developing a simple application.</p>
+                    <p class="text-base md:text-lg mb-2">I'm eager to apply my knowledge and skills in a dynamic work environment to contribute to innovative projects and continue learning. In my free time, I enjoy attending workshops I can use in my career.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="services" class="min-h-screen flex flex-col justify-center items-center bg-gray-100">
+        <div class="container mx-auto p-8">
+            <h2 class="text-2xl font-bold mb-4 text-center">SERVICES</h2>
+            <p class="text-lg text-center mb-4">Here's where I'm good at</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+                <div class="group rounded-lg p-8 shadow hover:bg-primary transition duration-300 ease-in-out">
+                    <div class="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
+                        <div class="block group-hover:hidden">
+                            <img src="/images/coding.png" alt="Development Icon" />
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <h3 class="pt-8 text-lg font-semibold uppercase text-primary group-hover:text-yellow lg:text-xl">WEB DEVELOPMENT</h3>
+                        <p class="text-gray-600 pt-4 text-sm md:text-base">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+    
+                <div class="group rounded-lg p-8 shadow hover:bg-primary transition duration-300 ease-in-out">
+                    <div class="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
+                        <div class="block group-hover:hidden">
+                            <img src="/images/graphicdesign.png" alt="Graphic Design Icon" />
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <h3 class="pt-8 text-lg font-semibold uppercase text-primary group-hover:text-yellow lg:text-xl">GRAPHIC DESIGN</h3>
+                        <p class="text-gray-600 pt-4 text-sm md:text-base">
+                            <a href="https://www.canva.com/design/DAGS2ifGU8E/17ODHHSp90tCr98nLFTbjw/edit?utm_content=DAGS2ifGU8E&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank" class="text-blue-500 hover:underline">Schedule Templates (SAMPLE ONLY)</a>
+                        </p>
+                    </div>
+                </div>
+    
+                <div class="group rounded-lg p-8 shadow hover:bg-primary transition duration-300 ease-in-out">
+                    <div class="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
+                        <div class="block group-hover:hidden">
+                            <img src="/images/web-design.png" alt="Web Design Icon" />
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <h3 class="pt-8 text-lg font-semibold uppercase text-primary group-hover:text-yellow lg:text-xl">WEB DESIGN</h3>
+                        <p class="text-gray-600 pt-4 text-sm md:text-base">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="portfolio" class="min-h-screen flex flex-col justify-center items-center bg-gray-900">
+        <div class="container mx-auto p-8">
+            <h2 class="text-2xl font-bold mb-4 text-center text-white">PORTFOLIO</h2>
+            <p class="text-lg text-center mb-4 text-white">Here's what I have done in the past</p>
+    
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+
+                <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                    <img src="/images/flood-watch.png" alt="Project 1 Screenshot" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold">Flood-Watch</h3>
+                        <p class="text-gray-700 mb-2">A capstone project that aims to provide real-time flood data and route information to various stakeholders, including citizens, disaster response teams, and local government units (LGUs).</p>
+                        <p class="text-gray-500 mb-2"><strong>Technologies Used:</strong> HTML, CSS, JavaScript, SQL, Arduino (for prototype), OpenWeather API, OpenStreetMapAPI, Semaphore SMS Gateway</p>
+                        <div class="flex flex-col space-y-1">
+                            <a href="https://flood-watch.netlify.app/" target="_blank" class="text-blue-500 hover:underline">View Live Project</a>
+                            <a href="https://github.com/uriel000/flood-time" target="_blank" class="text-blue-500 hover:underline">GitHub Repository</a>
+                            <a href="https://www.figma.com/design/7e7NFEmWmlTmUvqqNCiyBB/FLOOD--WATCH%3A-WEB-%2F-MOBILE-APPLICATION?node-id=0-1&t=OXoE7kYzTtvyKJ1m-1" target="_blank" class="text-blue-500 hover:underline">View Figma File - Mobile Version ONLY</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                    <img src="/images/bananashu.png" alt="Project 2 Screenshot" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold">Banana Shu Milk Tea Shop</h3>
+                        <p class="text-gray-700 mb-2">We showcased our sample business by developing a website. This project allowed us to apply our knowledge in a practical setting, enhancing our understanding of entrepreneurship in the digital landscape.</p>
+                        <p class="text-gray-500 mb-2"><strong>Technologies Used:</strong> HTML, CSS, PHP, SQL, & XAMPP</p>
+                        <div class="flex flex-col space-y-1">
+                            <a href="https://github.com/mariahsidney/bananashu" target="_blank" class="text-blue-500 hover:underline">GitHub Repository</a>
+                            <a href="https://drive.google.com/file/d/1AqlT8KeHbrSMpQfo3iav2wdOVFj6e_pa/view?usp=sharing" class="text-blue-500 hover:underline">Website Video Demo - No DB</a> 
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white shadow-lg rounded-lg overflow-hidden">
+                    <img src="/images/sukieco.png" alt="Project 3 Screenshot" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-semibold">SUKIECO: Online Shop</h3>
+                        <p class="text-gray-700 mb-2">Our final project for the Human-Computer Interaction course, we had the opportunity to showcase our learning from the semester. We developed interaction flows to explain how the application is intended to be used.</p>
+                        <p class="text-gray-500 mb-2"><strong>Technologies Used:</strong> Figma</p>
+                        <a href="https://www.figma.com/design/Wo9JgNHJerJ5paM4JKZCnt/SukiEco?m=auto&t=BK1gArevflsZKeld-1" target="_blank" class="text-blue-500 hover:underline">View Figma File</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="sideprojects" class="min-h-screen flex flex-col justify-center items-center bg-gray-100">
+        <div class="container mx-auto p-8">
+            <h2 class="text-2xl font-bold mb-4 text-center">Side Projects</h2>
+            <p class="text-lg text-center mb-4">Here are some of my side projects</p>
+    
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 mt-8">
+
+                <div class="bg-white shadow-lg rounded-lg p-4">
+                    <h4 class="text-xl font-semibold">With Jay</h4>
+                    <p>This fan project is dedicated to Jay from ENHYPEN and serves as a heartfelt tribute from his fans, known as ENGENEs. The website features a collection of personal letters from fans expressing their support and admiration for Jay, along with beautiful fan arts created by the community. Additionally, the project includes a surprise video compilation that showcases messages and creativity from ENGENEs, celebrating Jay's journey and impact as an artist. This project not only highlights the love and dedication of fans but also aims to create a warm and encouraging space for everyone who supports Jay.</p>
+                    <p><strong>Technologies Used:</strong> Wix</p>
+                    <a href="https://dailyyjay.wixsite.com/" target="_blank" class="text-blue-500 hover:underline">View Project</a>
+                    <p class="mt-2"><strong>Learning Outcomes:</strong> Through this fan project, I enhanced my web design skills, learned the importance of community engagement, improved content organization, developed collaboration abilities, and gained technical proficiency using Wix.</p>
+                </div>
+    
+                <div class="bg-white shadow-lg rounded-lg p-4">
+                    <h4 class="text-xl font-semibold">Yonsei University Hospital Website</h4>
+                    <p>I created a sample website using Wix that showcases information about communicable diseases and provides examples of health insurance options.</p>
+                    <p><strong>Technologies Used:</strong> Wix</p>
+                    <a href="https://sidneybellaflor.wixsite.com/website" target="_blank" class="text-blue-500 hover:underline">View Project</a>
+                    <p class="mt-2"><strong>Learning Outcomes:</strong> I learned that through this project, I enhanced my web development skills using Wix, improved my research abilities by presenting accurate information on communicable diseases and health insurance, learned to organize content effectively for user engagement, gained a deeper understanding of public health issues, and developed an appreciation for user experience design.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="bg-gray-800 text-white py-4">
+        <div class="container mx-auto text-center">
+            <p class="mb-2">Connect with me:</p>
+            <div class="flex justify-center space-x-4">
+                <a href="https://github.com/mariahsidney" target="_blank" class="hover:underline">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/mariahsidneyb/" target="_blank" class="hover:underline">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a href="mailto:mariahsidneyb@gmail.com" class="hover:underline">Email</a>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById("mobileMenu");
+            mobileMenu.classList.toggle("hidden");
+        }
+    </script>
+</body>
+</html>
