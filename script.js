@@ -5,7 +5,6 @@ const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.links');
 const links = document.querySelectorAll('.links a');
 
-// Create overlay dynamically
 const overlay = document.createElement('div');
 overlay.className = 'menu-overlay';
 document.body.appendChild(overlay);
@@ -14,19 +13,13 @@ function toggleMenu() {
     hamburger.classList.toggle('active');
     navLinks.classList.toggle('active');
     overlay.classList.toggle('active');
-
-    // Update aria-expanded
     const isOpen = navLinks.classList.contains('active');
     hamburger.setAttribute('aria-expanded', isOpen);
 }
 
-// Toggle on hamburger click
 hamburger.addEventListener('click', toggleMenu);
-
-// Close on overlay click
 overlay.addEventListener('click', toggleMenu);
 
-// Close on link click
 links.forEach(link => {
     link.addEventListener('click', () => {
         hamburger.classList.remove('active');
@@ -42,16 +35,10 @@ links.forEach(link => {
 // ===========================================
 const backToTopBtn = document.getElementById('backToTop');
 
-// Show button when user scrolls down 300px
 window.addEventListener('scroll', () => {
-    if (window.scrollY > 300) {
-        backToTopBtn.style.display = 'block';
-    } else {
-        backToTopBtn.style.display = 'none';
-    }
+    backToTopBtn.style.display = window.scrollY > 300 ? 'block' : 'none';
 });
 
-// Scroll to top when clicked
 backToTopBtn.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 });
@@ -79,30 +66,27 @@ function typeEffect() {
     if (isDeleting) {
         typingText.textContent = currentPhrase.substring(0, charIndex - 1);
         charIndex--;
-        typingSpeed = 30; // Faster when deleting
+        typingSpeed = 30;
     } else {
         typingText.textContent = currentPhrase.substring(0, charIndex + 1);
         charIndex++;
-        typingSpeed = 50; // Normal speed when typing
+        typingSpeed = 50;
     }
 
-    // Move to next character
     if (!isDeleting && charIndex === currentPhrase.length) {
-        // Finished typing, pause then delete
         isDeleting = true;
-        typingSpeed = 2000; // Wait 2 seconds before deleting
+        typingSpeed = 2000;
     } else if (isDeleting && charIndex === 0) {
-        // Finished deleting, move to next phrase
         isDeleting = false;
         phraseIndex = (phraseIndex + 1) % phrases.length;
-        typingSpeed = 500; // Wait 0.5 seconds before typing next
+        typingSpeed = 500;
     }
 
     setTimeout(typeEffect, typingSpeed);
 }
 
-// Start the typing effect when page loads
 document.addEventListener('DOMContentLoaded', typeEffect);
+
 
 // ===========================================
 // AI CHATBOT FUNCTIONALITY
@@ -114,11 +98,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const chatToggle = document.getElementById('chat-toggle');
     const chatWindow = document.getElementById('chat-window');
     const chatClose = document.getElementById('chat-close');
+    const chatMinimized = document.getElementById('chat-minimized');
+    const chatRestore = document.getElementById('chat-restore');
     const chatForm = document.getElementById('chat-form');
     const chatInput = document.getElementById('chat-input');
     const chatMessages = document.getElementById('chat-messages');
 
-    // Portfolio data for the chatbot
+    // Portfolio data
     const portfolioData = {
         name: "Mariah Sidney B. Bellaflor",
         role: "Guidewire Digital Portal Developer Associate at PwC Manila",
@@ -141,73 +127,85 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // Simple keyword-based responses
+    // Get bot response
     function getBotResponse(userMessage) {
         const message = userMessage.toLowerCase();
 
-        // Greetings
         if (message.includes('hello') || message.includes('hi') || message.includes('hey')) {
             return "Hello! 👋 How can I help you learn more about Mariah today?";
         }
 
-        // About / Who
         if (message.includes('who') || message.includes('about')) {
             return `Mariah Sidney B. Bellaflor is a ${portfolioData.role}. She's a Magna Cum Laude IT graduate from PUP, focused on building inclusive, high-performance web applications.`;
         }
 
-        // Skills
         if (message.includes('skill') || message.includes('tech') || message.includes('technology')) {
             return `Mariah's technical skills include: ${portfolioData.skills.slice(0, 6).join(', ')}, and more. She specializes in frontend development, backend, UI/UX, and cloud technologies.`;
         }
 
-        // Experience / Work
         if (message.includes('experience') || message.includes('work') || message.includes('job')) {
             return `Mariah currently works as a Guidewire Digital Portal Developer Associate at PwC Acceleration Center Manila (since Oct 2025). Previously, she was a Web Development Intern at Unified Internship Program Incorporated.`;
         }
 
-        // Projects
-        if (message.includes('project') || message.includes('portfolio') || message.includes('work')) {
+        if (message.includes('project') || message.includes('portfolio')) {
             return `Mariah has worked on several projects:\n• ${portfolioData.projects[0].name} - ${portfolioData.projects[0].description}\n• ${portfolioData.projects[1].name} - ${portfolioData.projects[1].description}\n• ${portfolioData.projects[2].name} - ${portfolioData.projects[2].description}`;
         }
 
-        // Certifications
         if (message.includes('certification') || message.includes('certificate') || message.includes('cert')) {
             return `Mariah holds ${portfolioData.certifications.length} certifications including: ISC2 Certified in Cybersecurity, IBM Cybersecurity Specialist, Google UX Design Specialization, and Guidewire Associate – Jutro Developer.`;
         }
 
-        // Education
         if (message.includes('education') || message.includes('graduate') || message.includes('school') || message.includes('university') || message.includes('pup')) {
             return `Mariah is a Magna Cum Laude graduate from the Polytechnic University of the Philippines (PUP) with a degree in Information Technology.`;
         }
 
-        // Contact
         if (message.includes('contact') || message.includes('email') || message.includes('reach') || message.includes('linkedin')) {
             return `You can contact Mariah at:\n• Email: ${portfolioData.contact.email}\n• LinkedIn: ${portfolioData.contact.linkedin}\n• Portfolio: ${portfolioData.contact.portfolio}`;
         }
 
-        // Hiring / Job
-        if (message.includes('hire') || message.includes('hiring') || message.includes('available') || message.includes('job')) {
+        if (message.includes('hire') || message.includes('hiring') || message.includes('available')) {
             return "Mariah is currently working but always open to new opportunities! Feel free to reach out to her via email or LinkedIn.";
         }
 
-        // Default
         return "I'm not sure I understood that. Try asking about her skills, experience, projects, certifications, education, or how to contact her!";
     }
 
-    // Toggle chat window - Open
+    // Open chat
     if (chatToggle) {
         chatToggle.addEventListener('click', () => {
             chatWindow.classList.remove('chat-hidden');
             chatToggle.style.display = 'none';
+            chatMinimized.classList.add('minimized-hidden');
             chatInput.focus();
         });
     }
 
-    // Toggle chat window - Close (X button)
+    // Minimize chat (X button) - minimizes to bar instead of hiding
     if (chatClose) {
         chatClose.addEventListener('click', () => {
             chatWindow.classList.add('chat-hidden');
-            chatToggle.style.display = 'flex';
+            chatToggle.style.display = 'none';
+            chatMinimized.classList.remove('minimized-hidden');
+        });
+    }
+
+    // Restore from minimized bar
+    if (chatRestore) {
+        chatRestore.addEventListener('click', () => {
+            chatMinimized.classList.add('minimized-hidden');
+            chatWindow.classList.remove('chat-hidden');
+            chatInput.focus();
+        });
+    }
+
+    // Click on minimized bar to restore
+    if (chatMinimized) {
+        chatMinimized.addEventListener('click', (e) => {
+            if (e.target !== chatRestore) {
+                chatMinimized.classList.add('minimized-hidden');
+                chatWindow.classList.remove('chat-hidden');
+                chatInput.focus();
+            }
         });
     }
 
@@ -219,14 +217,11 @@ document.addEventListener('DOMContentLoaded', () => {
             const userMessage = chatInput.value.trim();
             if (!userMessage) return;
 
-            // Add user message
             addMessage(userMessage, 'user');
             chatInput.value = '';
 
-            // Show typing indicator
             showTyping();
 
-            // Get response after delay (simulates AI thinking)
             setTimeout(() => {
                 removeTyping();
                 const response = getBotResponse(userMessage);
@@ -235,7 +230,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Helper functions
     function addMessage(text, sender) {
         const messageDiv = document.createElement('div');
         messageDiv.className = `chat-message ${sender}`;
