@@ -185,28 +185,29 @@ document.addEventListener('DOMContentLoaded', () => {
     if (chatClose) {
         chatClose.addEventListener('click', () => {
             chatWindow.classList.add('chat-hidden');
-            chatToggle.style.display = 'none';
+            chatToggle.style.display = 'flex'; // ✅ show the toggle button again
             chatMinimized.classList.remove('minimized-hidden');
         });
     }
 
-    // Restore from minimized bar
+    // Restore from minimized bar button (↑)
     if (chatRestore) {
-        chatRestore.addEventListener('click', () => {
+        chatRestore.addEventListener('click', (e) => {
+            e.stopPropagation();
             chatMinimized.classList.add('minimized-hidden');
             chatWindow.classList.remove('chat-hidden');
+            chatToggle.style.display = 'none';
             chatInput.focus();
         });
     }
 
-    // Click on minimized bar to restore
+    // Click anywhere on minimized bar to restore
     if (chatMinimized) {
-        chatMinimized.addEventListener('click', (e) => {
-            if (e.target !== chatRestore) {
-                chatMinimized.classList.add('minimized-hidden');
-                chatWindow.classList.remove('chat-hidden');
-                chatInput.focus();
-            }
+        chatMinimized.addEventListener('click', () => {
+            chatMinimized.classList.add('minimized-hidden');
+            chatWindow.classList.remove('chat-hidden');
+            chatToggle.style.display = 'none';
+            chatInput.focus();
         });
     }
 
@@ -254,4 +255,5 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 });
+
 
