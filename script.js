@@ -85,14 +85,15 @@ function typeEffect() {
     setTimeout(typeEffect, typingSpeed);
 }
 
-document.addEventListener('DOMContentLoaded', typeEffect);
-
 
 // ===========================================
 // AI CHATBOT FUNCTIONALITY
 // ===========================================
 
 document.addEventListener('DOMContentLoaded', () => {
+
+    // Start typing animation
+    typeEffect();
 
     // DOM Elements
     const chatToggle = document.getElementById('chat-toggle');
@@ -180,7 +181,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Minimize chat (X button) - minimizes to bar instead of hiding
+    // Minimize chat (X button) — minimizes to bar instead of hiding
     if (chatClose) {
         chatClose.addEventListener('click', () => {
             chatWindow.classList.add('chat-hidden');
@@ -253,82 +254,4 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 });
-```
-
----
-
-## Updated CSS
-
-Add this to your `style.css`:
-
-```css
-/* =========================================== */
-/* MINIMIZED CHAT BAR                          */
-/* =========================================== */
-
-#chat-minimized {
-    position: fixed;
-    bottom: 30px;
-    left: 30px;
-    background: linear-gradient(135deg, var(--v-purple), var(--v-magenta));
-    color: white;
-    padding: 0.75rem 1.25rem;
-    border-radius: 30px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    z-index: 999;
-    box-shadow: 0 4px 15px rgba(139, 63, 217, 0.4);
-    transition: transform 0.2s, box-shadow 0.2s;
-    font-size: 0.85rem;
-    font-weight: 500;
-}
-
-#chat-minimized:hover {
-    transform: scale(1.03);
-    box-shadow: 0 6px 20px rgba(139, 63, 217, 0.5);
-}
-
-.minimized-hidden {
-    display: none !important;
-}
-
-.minimized-text {
-    white-space: nowrap;
-}
-
-#chat-restore {
-    background: rgba(255, 255, 255, 0.2);
-    border: none;
-    color: white;
-    width: 22px;
-    height: 22px;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 0.75rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background 0.2s;
-}
-
-#chat-restore:hover {
-    background: rgba(255, 255, 255, 0.3);
-}
-
-/* Mobile adjustments */
-@media (max-width: 480px) {
-    #chat-minimized {
-        bottom: 20px;
-        left: 20px;
-        right: 20px;
-        justify-content: center;
-    }
-
-    .minimized-text {
-        text-align: center;
-        width: 100%;
-    }
-}
 
