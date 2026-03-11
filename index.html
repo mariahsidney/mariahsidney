@@ -2,217 +2,375 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mariah Sidney Bellaflor</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-    </style>
-    <script src="https://kit.fontawesome.com/da36071577.js" crossorigin="anonymous"></script>
+
+    <!-- Open Graph Meta Tags for Social Media -->
+    <meta property="og:title" content="Mariah Sidney B. Bellaflor | Portfolio">
+    <meta property="og:description" content="Guidewire Digital Portal Developer Associate | Magna Cum Laude IT Graduate">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="/images/og-preview.jpg">
+
+    <title>Mariah Sidney B. Bellaflor | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
 </head>
-<body class="bg-gray-100">
+<body>
 
-    <nav class="bg-gray-800 sticky top-0 z-50">
-        <div class="container mx-auto flex justify-between items-center py-4">
-            <button id="menuButton" class="text-white inline-block lg:hidden focus:outline-none" onclick="toggleMobileMenu()">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-                </svg>
-            </button>
-            <ul id="menu" class="hidden lg:flex space-x-4 ml-auto">
-                <li><a href="#landing" class="text-white duration-300 hover:text-gray-200">HOME</a></li>
-                <li><a href="#about" class="text-white duration-300 hover:text-gray-200">ABOUT</a></li>
-                <li><a href="#services" class="text-white duration-300 hover:text-gray-200">SERVICES</a></li>
-                <li><a href="#portfolio" class="text-white duration-300 hover:text-gray-200">PORTFOLIO</a></li>
-                <li><a href="#sideprojects" class="text-white duration-300 hover:text-gray-200">SIDE PROJECTS</a></li>
-            </ul>
-        </div>
-        <div id="mobileMenu" class="lg:hidden hidden bg-gray-700">
-            <ul class="flex flex-col space-y-2 p-4">
-                <li><a href="#landing" class="text-white duration-300 hover:text-gray-200">HOME</a></li>
-                <li><a href="#about" class="text-white duration-300 hover:text-gray-200">ABOUT</a></li>
-                <li><a href="#services" class="text-white duration-300 hover:text-gray-200">SERVICES</a></li>
-                <li><a href="#portfolio" class="text-white duration-300 hover:text-gray-200">PORTFOLIO</a></li>
-                <li><a href="#sideprojects" class="text-white duration-300 hover:text-gray-200">SIDE PROJECTS</a></li>
-            </ul>
-        </div>
-    </nav>
+<a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <div id="landing" class="h-screen flex flex-col justify-center items-center bg-gray-100">
-        <div class="flex flex-col md:flex-row justify-between items-center w-full max-w-4xl px-4">
-            <div class="text-content text-center md:text-left mb-4 md:mb-0">
-                <h1 class="text-4xl font-bold mb-2">Hi! I'm Mariah Sidney.</h1> 
-                <p class="mb-4">Welcome to my portfolio!</p>
-                <div class="flex items-center space-x-4">
-                    <span class="text-black text-lg uppercase">Let's Connect</span>
-                    <a href="https://github.com/mariahsidney" target="_blank" class="hover:underline">
-                        <i class="fa-brands fa-github" style="font-size: 24px;"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/mariahsidneyb/" target="_blank" class="hover:underline">
-                        <i class="fa-brands fa-linkedin" style="font-size: 24px;"></i>
-                    </a>
-                </div>
+<!-- BACK TO TOP BUTTON -->
+<button id="backToTop" aria-label="Back to top">↑</button>
+
+<!-- NAV -->
+<nav role="navigation" aria-label="Main navigation">
+    <a href="#home" class="logo" aria-label="Mariah Sidney — Home">Mariah Sidney</a>
+    <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </button>
+    <ul class="links" id="nav-links" role="list">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#sideprojects">Side Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- HERO -->
+<header id="home" role="banner">
+    <div class="hero">
+        <div class="vibe-blob blob-purple" aria-hidden="true"></div>
+        <div class="vibe-blob blob-teal"   aria-hidden="true"></div>
+        <div class="vibe-blob blob-mag"    aria-hidden="true"></div>
+        <div class="hero-content">
+            <div class="hero-eyebrow">
+                <span class="vibe-pill pill-purple">Creativity</span>
+                <span class="vibe-pill pill-teal">Energy</span>
+                <span class="vibe-pill pill-mag">Style</span>
             </div>
-            <div class="flex justify-center md:justify-end">
-                <img src="/images/shortdetails.png" class="h-64 w-auto md:w-90 object-cover">
+            <h1>Mariah Sidney<br><span class="name-gradient">B. Bellaflor</span></h1>
+            <p class="hero-role">Guidewire Digital Portal Developer Associate · PwC Manila</p>
+            <p class="hero-subtitle">Magna Cum Laude IT graduate specialising in full-stack development, UI/UX, and cybersecurity.</p>
+            <div class="hero-actions">
+                <a href="#projects" class="btn-primary">Explore My Work</a>
+                <a href="BELLAFLOR_CV.pdf" class="btn-outline" download>Download CV</a>
             </div>
         </div>
     </div>
+</header>
 
-    <div id="about" class="h-screen flex flex-col justify-center items-center bg-gray-900 text-white">
-        <div class="container mx-auto p-4 md:p-8">
-            <h2 class="text-2xl font-bold mb-4 text-center">ABOUT</h2>
-            <div class="flex flex-col md:flex-row items-center justify-center md:justify-start">
-                <img src="/images/fullshot.jpg" class="h-32 w-32 md:h-64 md:w-64 object-cover rounded-full mb-4 md:mb-0 md:mr-8">
-                <div class="text-center md:text-left">
-                    <p class="text-base md:text-lg mb-2">Hello! I'm Mariah Sidney, a fresh graduate from Polytechnic University of the Philippines with a degree in Bachelor of Science in Information Technology. With a passion for technology and an aptitude for problem-solving, I'm excited to launch my career in the tech industry.</p> 
-                    <p class="text-base md:text-lg mb-2">In the past four years, I have gained hands-on experience in web design and development, and software development. I have completed projects using the skills I learned, such as creating a database, building a simple website, and developing a simple application.</p>
-                    <p class="text-base md:text-lg mb-2">I'm eager to apply my knowledge and skills in a dynamic work environment to contribute to innovative projects and continue learning. In my free time, I enjoy attending workshops I can use in my career.</p>
-                </div>
-            </div>
-        </div>
-    </div>
+<!-- MAIN -->
+<main id="main-content">
 
-    <div id="services" class="min-h-screen flex flex-col justify-center items-center bg-gray-100">
-        <div class="container mx-auto p-8">
-            <h2 class="text-2xl font-bold mb-4 text-center">SERVICES</h2>
-            <p class="text-lg text-center mb-4">Here's where I'm good at</p>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
-                <div class="group rounded-lg p-8 shadow hover:bg-primary transition duration-300 ease-in-out">
-                    <div class="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
-                        <div class="block group-hover:hidden">
-                            <img src="/images/coding.png" alt="Development Icon" />
-                        </div>
-                    </div>
-                    <div class="text-center">
-                        <h3 class="pt-8 text-lg font-semibold uppercase text-primary group-hover:text-yellow lg:text-xl">WEB DEVELOPMENT</h3>
-                    </div>
-                </div>
-    
-                <div class="group rounded-lg p-8 shadow hover:bg-primary transition duration-300 ease-in-out">
-                    <div class="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
-                        <div class="block group-hover:hidden">
-                            <img src="/images/graphicdesign.png" alt="Graphic Design Icon" />
-                        </div>
-                    </div>
-                    <div class="text-center">
-                        <h3 class="pt-8 text-lg font-semibold uppercase text-primary group-hover:text-yellow lg:text-xl">GRAPHIC DESIGN</h3>
-                        <p class="text-gray-600 pt-4 text-sm md:text-base">
-                            <a href="https://www.canva.com/design/DAGS2ifGU8E/17ODHHSp90tCr98nLFTbjw/edit?utm_content=DAGS2ifGU8E&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank" class="text-blue-500 hover:underline">Schedule Templates (SAMPLE ONLY)</a>
-                        </p>
-                    </div>
-                </div>
-    
-                <div class="group rounded-lg p-8 shadow hover:bg-primary transition duration-300 ease-in-out">
-                    <div class="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
-                        <div class="block group-hover:hidden">
-                            <img src="/images/web-design.png" alt="Web Design Icon" />
-                        </div>
-                    </div>
-                    <div class="text-center">
-                        <h3 class="pt-8 text-lg font-semibold uppercase text-primary group-hover:text-yellow lg:text-xl">WEB DESIGN</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <div id="portfolio" class="min-h-screen flex flex-col justify-center items-center bg-gray-900">
-        <div class="container mx-auto p-8">
-            <h2 class="text-2xl font-bold mb-4 text-center text-white">PORTFOLIO</h2>
-            <p class="text-lg text-center mb-4 text-white">Here's what I have done in the past</p>
-    
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+    <!-- ABOUT -->
+    <section id="about" aria-labelledby="about-heading">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text">
+                    <p class="section-label" aria-hidden="true">Introduction</p>
+                    <h2 id="about-heading">Building Inclusive,<br>High-Performance Apps</h2>
+                    <p>I am a <strong>Magna Cum Laude</strong> Information Technology graduate from <strong>Polytechnic University of the Philippines</strong>, focused on building inclusive, high-performance web applications.</p>
+                    <p>I leverage experience across the full SDLC — from IoT monitoring systems to enterprise-level portal development using Guidewire Jutro at <strong>PwC Acceleration Center Manila</strong>.</p>
 
-                <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-                    <img src="/images/flood-watch.png" alt="Project 1 Screenshot" class="w-full h-48 object-cover">
-                    <div class="p-4">
-                        <h3 class="text-xl font-semibold">Flood-Watch</h3>
-                        <p class="text-gray-700 mb-2">A capstone project that aims to provide real-time flood data and route information to various stakeholders, including citizens, disaster response teams, and local government units (LGUs).</p>
-                        <p class="text-gray-500 mb-2"><strong>Technologies Used:</strong> HTML, CSS, JavaScript, SQL, Arduino (for prototype), OpenWeather API, OpenStreetMapAPI, Semaphore SMS Gateway</p>
-                        <div class="flex flex-col space-y-1">
-                            <a href="https://flood-watch.netlify.app/" target="_blank" class="text-blue-500 hover:underline">View Live Project</a>
-                            <a href="https://github.com/uriel000/flood-time" target="_blank" class="text-blue-500 hover:underline">GitHub Repository</a>
-                            <a href="https://www.figma.com/design/7e7NFEmWmlTmUvqqNCiyBB/FLOOD--WATCH%3A-WEB-%2F-MOBILE-APPLICATION?node-id=0-1&t=OXoE7kYzTtvyKJ1m-1" target="_blank" class="text-blue-500 hover:underline">View Figma File - Mobile Version ONLY</a>
-                        </div>
+                    <!-- Skill Tags -->
+                    <div class="skill-tags" role="list" aria-label="Technical skills">
+                        <span class="tag" role="listitem">Java</span>
+                        <span class="tag" role="listitem">Python</span>
+                        <span class="tag" role="listitem">R</span>
+                        <span class="tag" role="listitem">PHP</span>
+                        <span class="tag" role="listitem">ReactJS</span>
+                        <span class="tag" role="listitem">TypeScript</span>
+                        <span class="tag" role="listitem">Tailwind CSS</span>
+                        <span class="tag" role="listitem">Guidewire Jutro</span>
+                        <span class="tag" role="listitem">Figma</span>
+                        <span class="tag" role="listitem">MySQL</span>
+                        <span class="tag" role="listitem">GCP</span>
+                        <span class="tag" role="listitem">WordPress</span>
                     </div>
-                </div>
-    
-                <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-                    <img src="/images/bananashu.png" alt="Project 2 Screenshot" class="w-full h-48 object-cover">
-                    <div class="p-4">
-                        <h3 class="text-xl font-semibold">Banana Shu Milk Tea Shop</h3>
-                        <p class="text-gray-700 mb-2">We showcased our sample business by developing a website. This project allowed us to apply our knowledge in a practical setting, enhancing our understanding of entrepreneurship in the digital landscape.</p>
-                        <p class="text-gray-500 mb-2"><strong>Technologies Used:</strong> HTML, CSS, PHP, SQL, & XAMPP</p>
-                        <div class="flex flex-col space-y-1">
-                            <a href="https://github.com/mariahsidney/bananashu" target="_blank" class="text-blue-500 hover:underline">GitHub Repository</a>
-                            <a href="https://drive.google.com/file/d/1AqlT8KeHbrSMpQfo3iav2wdOVFj6e_pa/view?usp=sharing" class="text-blue-500 hover:underline">Website Video Demo - No DB</a> 
+
+                    <!-- Skill Bars -->
+                    <div class="skill-bars">
+                        <div class="skill-bar-item">
+                            <span class="skill-name">Frontend</span>
+                            <div class="skill-bar-bg"><div class="skill-bar-fill purple" style="width: 90%"></div></div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <span class="skill-name">Backend</span>
+                            <div class="skill-bar-bg"><div class="skill-bar-fill teal" style="width: 80%"></div></div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <span class="skill-name">UI/UX</span>
+                            <div class="skill-bar-bg"><div class="skill-bar-fill magenta" style="width: 85%"></div></div>
+                        </div>
+                        <div class="skill-bar-item">
+                            <span class="skill-name">Cloud</span>
+                            <div class="skill-bar-bg"><div class="skill-bar-fill orange" style="width: 70%"></div></div>
                         </div>
                     </div>
                 </div>
 
-                <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-                    <img src="/images/sukieco.png" alt="Project 3 Screenshot" class="w-full h-48 object-cover">
-                    <div class="p-4">
-                        <h3 class="text-xl font-semibold">SUKIECO: Online Shop</h3>
-                        <p class="text-gray-700 mb-2">Our final project for the Human-Computer Interaction course, we had the opportunity to showcase our learning from the semester. We developed interaction flows to explain how the application is intended to be used.</p>
-                        <p class="text-gray-500 mb-2"><strong>Technologies Used:</strong> Figma</p>
-                        <a href="https://www.figma.com/design/Wo9JgNHJerJ5paM4JKZCnt/SukiEco?m=auto&t=BK1gArevflsZKeld-1" target="_blank" class="text-blue-500 hover:underline">View Figma File</a>
+                <!-- Profile Card with Photo -->
+                <div>
+                    <div class="profile-card" role="complementary" aria-label="Profile summary">
+                        <div class="profile-img-container">
+                            <!-- Replace src with your actual photo path -->
+                            <img src="https://via.placeholder.com/80/5B2D8E/FFFFFF?text=MS" alt="Mariah Sidney B. Bellaflor" class="profile-photo">
+                        </div>
+                        <div class="profile-name">Mariah Sidney B. Bellaflor</div>
+                        <div class="profile-role">Guidewire Developer Associate · PwC Manila</div>
+                        <p class="profile-bio">Contributing to enterprise insurance platform development at PwC Acceleration Center Manila, bridging technical precision with accessible design.</p>
+                        <div class="stat-row" aria-label="Key stats">
+                            <div class="stat">
+                                <div class="stat-num">7+</div>
+                                <div class="stat-label">Certifications</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-num">3+</div>
+                                <div class="stat-label">Projects</div>
+                            </div>
+                            <div class="stat">
+                                <div class="stat-num">6+</div>
+                                <div class="stat-label">Trainings</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    
-    <div id="sideprojects" class="min-h-screen flex flex-col justify-center items-center bg-gray-100">
-        <div class="container mx-auto p-8">
-            <h2 class="text-2xl font-bold mb-4 text-center">SIDE PROJECTS</h2>
-            <p class="text-lg text-center mb-4">Here are some of my side projects</p>
-    
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 mt-8">
+    </section>
 
-                <div class="bg-white shadow-lg rounded-lg p-4">
-                    <h4 class="text-xl font-semibold">With Jay</h4>
-                    <p>This fan project is dedicated to Jay from ENHYPEN and serves as a heartfelt tribute from his fans, known as ENGENEs. The website features a collection of personal letters from fans expressing their support and admiration for Jay, along with beautiful fan arts created by the community. Additionally, the project includes a surprise video compilation that showcases messages and creativity from ENGENEs, celebrating Jay's journey and impact as an artist. This project not only highlights the love and dedication of fans but also aims to create a warm and encouraging space for everyone who supports Jay.</p>
-                    <p><strong>Technologies Used:</strong> Wix</p>
-                    <a href="https://dailyyjay.wixsite.com/" target="_blank" class="text-blue-500 hover:underline">View Project</a>
-                    <p class="mt-2"><strong>Learning Outcomes:</strong> Through this fan project, I enhanced my web design skills, learned the importance of community engagement, improved content organization, developed collaboration abilities, and gained technical proficiency using Wix.</p>
+    <!-- EXPERIENCE -->
+    <section id="experience" aria-labelledby="exp-heading">
+        <div class="container">
+            <p class="section-label" aria-hidden="true">Work History</p>
+            <h2 id="exp-heading">Professional Journey</h2>
+            <div class="timeline">
+                <article class="timeline-item">
+                    <div class="timeline-date">
+                        <div class="date-main">Oct 2025 – Present</div>
+                        <div class="date-sub">Full-time</div>
+                    </div>
+                    <div class="timeline-line" aria-hidden="true">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-connector"></div>
+                    </div>
+                    <div class="timeline-body">
+                        <h3>Guidewire Digital Portal Developer Associate</h3>
+                        <div class="timeline-company">PwC Acceleration Center Manila</div>
+                        <p>Enterprise-level portal development using Guidewire Jutro framework, contributing to insurance technology transformation projects.</p>
+                    </div>
+                </article>
+                <article class="timeline-item">
+                    <div class="timeline-date">
+                        <div class="date-main">Mar 2024 – Jul 2024</div>
+                        <div class="date-sub">Internship</div>
+                    </div>
+                    <div class="timeline-line" aria-hidden="true">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-connector"></div>
+                    </div>
+                    <div class="timeline-body">
+                        <h3>Web Development Intern</h3>
+                        <div class="timeline-company">Unified Internship Program Incorporated</div>
+                        <ul>
+                            <li>Developed WordPress websites using custom themes and Tailwind CSS.</li>
+                            <li>Enhanced performance via cross-browser compatibility testing.</li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section id="certifications" aria-labelledby="cert-heading">
+        <div class="container">
+            <p class="section-label" aria-hidden="true">Credentials</p>
+            <h2 id="cert-heading">Certifications</h2>
+            <div class="cert-grid">
+                <div class="cert-card">
+                    <div class="cert-category">Cybersecurity</div>
+                    <ul class="cert-list">
+                        <li>ISC2 Certified in Cybersecurity</li>
+                        <li>IBM Cybersecurity Specialist</li>
+                        <li>Fortinet Certified Associate (FCA)</li>
+                    </ul>
                 </div>
-    
-                <div class="bg-white shadow-lg rounded-lg p-4">
-                    <h4 class="text-xl font-semibold">Yonsei University Hospital Website</h4>
-                    <p>I created a sample website using Wix that showcases information about communicable diseases and provides examples of health insurance options.</p>
-                    <p><strong>Technologies Used:</strong> Wix</p>
-                    <a href="https://sidneybellaflor.wixsite.com/website" target="_blank" class="text-blue-500 hover:underline">View Project</a>
-                    <p class="mt-2"><strong>Learning Outcomes:</strong> I learned that through this project, I enhanced my web development skills using Wix, improved my research abilities by presenting accurate information on communicable diseases and health insurance, learned to organize content effectively for user engagement, gained a deeper understanding of public health issues, and developed an appreciation for user experience design.</p>
+                <div class="cert-card">
+                    <div class="cert-category">Industry & Design</div>
+                    <ul class="cert-list">
+                        <li>Guidewire Associate – Jutro Developer</li>
+                        <li>Google UX Design Specialization</li>
+                        <li>IBM IT Support Specialization</li>
+                    </ul>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-category">Cloud & AI</div>
+                    <ul class="cert-list">
+                        <li>Google Cloud Platform Fundamentals</li>
+                        <li>Introduction to Modern AI (CISCO)</li>
+                    </ul>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-category">Academic Honour</div>
+                    <ul class="cert-list">
+                        <li>Magna Cum Laude — Polytechnic University of the Philippines</li>
+                    </ul>
                 </div>
             </div>
         </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" aria-labelledby="proj-heading">
+        <div class="container">
+            <p class="section-label" aria-hidden="true">Work Samples</p>
+            <h2 id="proj-heading">Featured Projects</h2>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <article class="project-card">
+                    <div class="project-thumb">
+                        <img src="/images/flood-watch.png" alt="Flood-Watch Screenshot" class="project-img" onerror="this.style.display='none'">
+                    </div>
+                    <div class="project-body">
+                        <div class="project-type">IoT · Full-Stack</div>
+                        <h3>Flood-Watch</h3>
+                        <p class="project-desc">A capstone project that aims to provide real-time flood data and route information to various stakeholders.</p>
+                        <p class="project-tech"><strong>Tech:</strong> HTML, CSS, JavaScript, SQL, Arduino, OpenWeather API</p>
+                        <div class="project-links">
+                            <a href="https://flood-watch.netlify.app/" target="_blank" class="project-link">Live Demo</a>
+                            <a href="https://github.com/uriel000/flood-time" target="_blank" class="project-link">GitHub</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 2 -->
+                <article class="project-card">
+                    <div class="project-thumb">
+                        <img src="/images/bananashu.png" alt="Banana Shu Screenshot" class="project-img" onerror="this.style.display='none'">
+                    </div>
+                    <div class="project-body">
+                        <div class="project-type">E-Commerce</div>
+                        <h3>Banana Shu Milk Tea</h3>
+                        <p class="project-desc">We showcased our sample business by developing a website for entrepreneurship in the digital landscape.</p>
+                        <p class="project-tech"><strong>Tech:</strong> HTML, CSS, PHP, SQL, XAMPP</p>
+                        <div class="project-links">
+                            <a href="https://github.com/mariahsidney/bananashu" target="_blank" class="project-link">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 3 -->
+                <article class="project-card">
+                    <div class="project-thumb">
+                        <img src="/images/sukieco.png" alt="SUKIECO Screenshot" class="project-img" onerror="this.style.display='none'">
+                    </div>
+                    <div class="project-body">
+                        <div class="project-type">UI/UX Design</div>
+                        <h3>SUKIECO: Online Shop</h3>
+                        <p class="project-desc">Our final project for the Human-Computer Interaction course. We developed interaction flows.</p>
+                        <p class="project-tech"><strong>Tech:</strong> Figma</p>
+                        <div class="project-links">
+                            <a href="https://www.figma.com/design/Wo9JgNHJerJ5paM4JKZCnt/SukiEco" target="_blank" class="project-link">Figma</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- SIDE PROJECTS -->
+    <section id="sideprojects" aria-labelledby="sideproj-heading">
+        <div class="container">
+            <p class="section-label" aria-hidden="true">Personal Ventures</p>
+            <h2 id="sideproj-heading">Side Projects</h2>
+            <p class="section-desc">
+                Passion projects and fan collaborations outside of academia, showcasing community engagement and creative web design skills.
+            </p>
+            <div class="projects-grid">
+                <!-- Side Project 1 -->
+                <article class="project-card">
+                    <div class="project-thumb" style="background: linear-gradient(135deg, var(--base) 0%, #1F0F24 100%);">
+                        <div class="project-stripe" style="background: var(--v-magenta-raw);"></div>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-type" style="color: var(--v-magenta);">Fan Project</div>
+                        <h3>With Jay (ENHYPEN)</h3>
+                        <p class="project-desc">A heartfelt tribute fan project dedicated to Jay from ENHYPEN featuring fan letters, community art, and video compilations.</p>
+                        <p class="project-tech"><strong>Tech:</strong> Wix, Web Design</p>
+                        <div class="project-links">
+                            <a href="https://dailyyjay.wixsite.com/" target="_blank" class="project-link" style="color: var(--v-magenta);">View Project</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Side Project 2 -->
+                <article class="project-card">
+                    <div class="project-thumb" style="background: linear-gradient(135deg, var(--base) 0%, #1F140A 100%);">
+                        <div class="project-stripe" style="background: var(--v-orange-raw);"></div>
+                    </div>
+                    <div class="project-body">
+                        <div class="project-type" style="color: var(--v-orange);">Web Development</div>
+                        <h3>Yonsei Univ. Hospital</h3>
+                        <p class="project-desc">A sample Wix website showcasing information about communicable diseases and health insurance options.</p>
+                        <p class="project-tech"><strong>Tech:</strong> Wix</p>
+                        <div class="project-links">
+                            <a href="https://sidneybellaflor.wixsite.com/website" target="_blank" class="project-link" style="color: var(--v-orange);">View Project</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRAININGS -->
+    <section id="trainings" aria-labelledby="train-heading">
+        <div class="container">
+            <p class="section-label" aria-hidden="true">Continuing Education</p>
+            <h2 id="train-heading">Trainings &amp; Seminars</h2>
+            <div class="trainings-grid">
+                <div class="training-item">Microsoft Power Up Program<div class="year">2025 · Microsoft</div></div>
+                <div class="training-item">CodeCraft Bootcamp<div class="year">WPH Digital</div></div>
+                <div class="training-item">Introduction to Modern AI<div class="year">CISCO</div></div>
+                <div class="training-item">Google Cloud Run Serverless Workshop<div class="year">Google</div></div>
+                <div class="training-item">Demystifying Backend Development<div class="year">PUP</div></div>
+                <div class="training-item">Java OOP Basics Workshop<div class="year">PUP</div></div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer id="contact" role="contentinfo">
+    <div class="footer-blob-a" aria-hidden="true"></div>
+    <div class="footer-blob-b" aria-hidden="true"></div>
+    <h2>Let's Connect</h2>
+    <p class="foot-sub">Open to opportunities, collaborations, and conversations.</p>
+    <div class="contact-links">
+        <a href="https://linkedin.com/in/mariahsidneyb" class="contact-link" aria-label="LinkedIn profile">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+            LinkedIn
+        </a>
+        <a href="https://mariahsidney.vercel.app/" class="contact-link" aria-label="Portfolio website">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+            Portfolio
+        </a>
+        <a href="mailto:mariahsidneyb@gmail.com" class="contact-link" aria-label="Send email">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            Email
+        </a>
     </div>
-    
-    <footer class="bg-gray-800 text-white py-4">
-        <div class="container mx-auto text-center">
-            <p class="mb-2">Connect with me:</p>
-            <div class="flex justify-center space-x-4">
-                <a href="https://github.com/mariahsidney" target="_blank" class="hover:underline">
-                    <i class="fa-brands fa-github"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/mariahsidneyb/" target="_blank" class="hover:underline">
-                    <i class="fa-brands fa-linkedin"></i>
-                </a>
-                <a href="mailto:mariahsidneyb@gmail.com" class="hover:underline">Email</a>
-            </div>
-        </div>
-    </footer>
-    
-    <script>
-        function toggleMobileMenu() {
-            const mobileMenu = document.getElementById("mobileMenu");
-            mobileMenu.classList.toggle("hidden");
-        }
-    </script>
+    <p class="footer-copy">© 2025 Mariah Sidney B. Bellaflor · Accessibility-First Design · WCAG 2.1 AA Compliant</p>
+</footer>
+
+<script src="script.js"></script>
+
 </body>
 </html>
