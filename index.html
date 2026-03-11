@@ -375,10 +375,38 @@
     <p class="footer-copy">© 2025 Mariah Sidney B. Bellaflor · Accessibility-First Design · WCAG 2.1 AA Compliant</p>
 </footer>
 
+    <!-- AI Chatbot -->
+<button id="chat-toggle" aria-label="Open chat">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+    </svg>
+    <span class="chat-badge">AI</span>
+</button>
+
+<div id="chat-window" class="chat-hidden" role="dialog" aria-label="AI Chat">
+    <div class="chat-header">
+        <div class="chat-title">
+            <span class="chat-avatar">🤖</span>
+            <span>Ask me about Mariah</span>
+        </div>
+        <button id="chat-close" aria-label="Close chat">×</button>
+    </div>
+    <div id="chat-messages">
+        <div class="chat-message bot">
+            <p>Hi there! 👋 I'm an AI assistant for Mariah's portfolio. Ask me anything about her skills, experience, projects, or how to contact her!</p>
+        </div>
+    </div>
+    <form id="chat-form">
+        <input type="text" id="chat-input" placeholder="Ask a question..." aria-label="Chat message">
+        <button type="submit" aria-label="Send message">Send</button>
+    </form>
+</div>
+
 <script src="script.js"></script>
 
 </body>
 </html>
+
 
 
 
