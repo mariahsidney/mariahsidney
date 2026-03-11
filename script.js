@@ -50,3 +50,50 @@ window.addEventListener('scroll', () => {
 backToTopBtn.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 });
+
+// ===========================================
+// TYPING ANIMATION
+// ===========================================
+const typingText = document.querySelector('.typing-text');
+const phrases = [
+    "Magna Cum Laude IT graduate from PUP.",
+    "Guidewire Digital Portal Developer.",
+    "Specializing in full-stack development.",
+    "UI/UX Designer & Cybersecurity Enthusiast."
+];
+
+let phraseIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+let typingSpeed = 50;
+
+function typeEffect() {
+    const currentPhrase = phrases[phraseIndex];
+
+    if (isDeleting) {
+        typingText.textContent = currentPhrase.substring(0, charIndex - 1);
+        charIndex--;
+        typingSpeed = 30; // Faster when deleting
+    } else {
+        typingText.textContent = currentPhrase.substring(0, charIndex + 1);
+        charIndex++;
+        typingSpeed = 50; // Normal speed when typing
+    }
+
+    // Move to next character
+    if (!isDeleting && charIndex === currentPhrase.length) {
+        // Finished typing, pause then delete
+        isDeleting = true;
+        typingSpeed = 2000; // Wait 2 seconds before deleting
+    } else if (isDeleting && charIndex === 0) {
+        // Finished deleting, move to next phrase
+        isDeleting = false;
+        phraseIndex = (phraseIndex + 1) % phrases.length;
+        typingSpeed = 500; // Wait 0.5 seconds before typing next
+    }
+
+    setTimeout(typeEffect, typingSpeed);
+}
+
+// Start the typing effect when page loads
+document.addEventListener('DOMContentLoaded', typeEffect);
