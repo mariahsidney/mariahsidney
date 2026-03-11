@@ -129,7 +129,7 @@ nav .links a:hover { color: #FFFFFF; }
 h1 { font-family: 'Syne', sans-serif; font-size: clamp(3rem, 7vw, 6rem); font-weight: 800; color: #FFFFFF; line-height: 1.0; margin-bottom: 0.15rem; }
 .name-gradient { background: linear-gradient(90deg, var(--v-purple-raw), var(--v-teal-raw)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
 .hero-role { font-family: 'Syne', sans-serif; font-size: clamp(1rem, 2vw, 1.4rem); font-weight: 400; color: rgba(255,255,255,0.65); margin-bottom: 1.5rem; }
-.hero-subtitle { font-size: 1.05rem; color: rgba(255,255,255,0.72); max-width: 500px; line-height: 1.8; margin-bottom: 2.5rem; font-weight: 300; }
+.hero-subtitle { font-size: 1.05rem; color: rgba(255,255,255,0.72); max-width: 500px; line-height: 1.8; margin-bottom: 2.5rem; font-weight: 300; min-height: 1.8em; /* Keeps height consistent */ }
 .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
 
 .btn-primary { background: var(--v-purple); color: #FFFFFF; font-family: 'Syne', sans-serif; font-weight: 700; font-size: 0.83rem; letter-spacing: 2px; text-transform: uppercase; padding: 0.9rem 2rem; border: none; cursor: pointer; text-decoration: none; display: inline-block; transition: background 0.2s, transform 0.15s; }
@@ -300,13 +300,35 @@ footer > .foot-sub { color: rgba(255,255,255,0.65); margin-bottom: 2.5rem; font-
 }
 #backToTop:hover { background: #4a2478; transform: translateY(-2px); }
 
+/* ─── TYPING ANIMATION ─── */
+.typing-text {
+    display: inline;
+    color: rgba(255,255,255,0.72);
+    font-weight: 300;
+}
+
+.cursor {
+    display: inline-block;
+    color: var(--v-teal-raw);
+    font-weight: 400;
+    font-size: 1.2rem;
+    vertical-align: middle;
+    margin-left: 2px;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+}
+
 /* Animations */
 @media (prefers-reduced-motion: no-preference) {
     @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
     .hero-eyebrow  { animation: fadeUp 0.6s ease both; }
     h1             { animation: fadeUp 0.6s 0.12s ease both; }
     .hero-role     { animation: fadeUp 0.6s 0.22s ease both; }
-    .hero-subtitle { animation: fadeUp 0.6s 0.32s ease both; }
+    .typing-container { animation: fadeUp 0.6s 0.32s ease both; }
     .hero-actions  { animation: fadeUp 0.6s 0.44s ease both; }
 }
 
