@@ -1,4 +1,6 @@
-// Mobile Menu Toggle
+// ===========================================
+// MOBILE MENU TOGGLE
+// ===========================================
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.links');
 const links = document.querySelectorAll('.links a');
@@ -34,7 +36,10 @@ links.forEach(link => {
     });
 });
 
-// Back to Top Button
+
+// ===========================================
+// BACK TO TOP BUTTON
+// ===========================================
 const backToTopBtn = document.getElementById('backToTop');
 
 // Show button when user scrolls down 300px
@@ -50,6 +55,7 @@ window.addEventListener('scroll', () => {
 backToTopBtn.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 });
+
 
 // ===========================================
 // TYPING ANIMATION
@@ -98,6 +104,12 @@ function typeEffect() {
 // Start the typing effect when page loads
 document.addEventListener('DOMContentLoaded', typeEffect);
 
+
+// ===========================================
+// AI CHATBOT FUNCTIONALITY
+// ===========================================
+
+// DOM Elements
 const chatToggle = document.getElementById('chat-toggle');
 const chatWindow = document.getElementById('chat-window');
 const chatClose = document.getElementById('chat-close');
@@ -215,6 +227,7 @@ chatForm.addEventListener('submit', (e) => {
     }, 800);
 });
 
+// Helper functions
 function addMessage(text, sender) {
     const messageDiv = document.createElement('div');
     messageDiv.className = `chat-message ${sender}`;
